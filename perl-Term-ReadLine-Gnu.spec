@@ -3,7 +3,7 @@ Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.09
-Release:	3
+Release:	4
 License:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
