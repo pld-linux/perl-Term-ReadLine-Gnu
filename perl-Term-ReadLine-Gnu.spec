@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
@@ -7,6 +8,7 @@ Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term-ReadLine-Gnu-%{version}.tar.gz
+BuildRequires:	rpm-perlprov
 BuildRequires:	perl >= 5.005_03-10
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
