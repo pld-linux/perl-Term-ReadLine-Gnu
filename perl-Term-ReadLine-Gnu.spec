@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Term::ReadLine::Gnu
 Summary(it):	Modulo di Perl Term::ReadLine::Gnu
 Summary(ja):	Term::ReadLine::Gnu Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Term::ReadLine::Gnu ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Term::ReadLine::Gnu
+Summary(nb):	Perlmodul Term::ReadLine::Gnu
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Summary(pt):	Módulo de Perl Term::ReadLine::Gnu
 Summary(pt_BR):	Módulo Perl Term::ReadLine::Gnu
