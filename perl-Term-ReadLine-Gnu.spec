@@ -3,7 +3,7 @@ Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.11
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -16,6 +16,7 @@ BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	readline-devel >= 4.2
 Provides:	perl(Term::ReadLine::Gnu::XS)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	perl-Term-Readline-Gnu
 
 %description
 Perl Term::ReadLine::Gnu module.
