@@ -2,18 +2,20 @@
 Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.07
-Release:	4
+Version:	1.08
+Release:	1
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term-ReadLine-Gnu-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/Term-ReadLine-Gnu-%{version}.tar.gz
+Patch:		perl-Term-ReadLine-Gnu-paths.patch
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel
 %requires_eq	perl
 Requires:	%{perl_sitearch}
+Provides:	perl(Term::ReadLine::Gnu::XS)
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -24,6 +26,7 @@ Modu³ Perla Term::ReadLine::Gnu.
 
 %prep
 %setup -q -n Term-ReadLine-Gnu-%{version}
+%patch -p0
 
 %build
 perl Makefile.PL
@@ -31,10 +34,13 @@ make OPTIMIZE="$RPM_OPT_FLAGS -DPERL_POLLUTE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{perl_archlib}
+install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
-make install \
-	DESTDIR=$RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+install eg/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+
+strip --strip-unneeded \
+	$RPM_BUILD_ROOT%{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Term/ReadLine/Gnu
@@ -42,21 +48,23 @@ make install \
   mv .packlist.new .packlist
 )
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
+	README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.gz
+
 %{perl_sitearch}/Term/ReadLine/Gnu*
 
 %dir %{perl_sitearch}/auto/Term/ReadLine/Gnu
-
 %attr(755,root,root) %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
-
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.bs
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/.packlist
 
 %{_mandir}/man3/*
+/usr/src/examples/%{name}
