@@ -5,7 +5,7 @@ Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.12
-Release:	2
+Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -40,7 +40,7 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p0
+%patch0 -p1
 
 %build
 perl Makefile.PL
