@@ -8,8 +8,8 @@ Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term-ReadLine-Gnu-%{version}.tar.gz
-BuildRequires:	rpm-perlprov
-BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
 %requires_eq	perl
