@@ -1,0 +1,40 @@
+--- eg.paths/fileman	Sat Feb 28 11:01:34 1998
++++ eg/fileman	Sat Feb 19 22:55:58 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ # $Id$
+ #
+--- eg.paths/perlsh	Thu Dec 30 06:05:30 1999
++++ eg/perlsh	Sat Feb 19 22:55:58 2000
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id$	
+ #
+--- eg.paths/pftp	Fri Mar 19 18:46:02 1999
++++ eg/pftp	Sat Feb 19 22:55:58 2000
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	$Id$
+ #
+--- eg.paths/ptksh+	Sun Mar 14 17:43:20 1999
++++ eg/ptksh+	Sat Feb 19 22:55:58 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ #
+ # $Id$
+ #
+--- Gnu/XS.pm.orig	Tue May  4 19:48:24 1999
++++ Gnu/XS.pm	Sat Feb 19 23:03:38 2000
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	XS.pm : perl function definition for Term::ReadLine::Gnu
+ #
