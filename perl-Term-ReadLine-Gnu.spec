@@ -30,13 +30,13 @@ Modu³ Perla Term::ReadLine::Gnu.
 
 %build
 perl Makefile.PL
-make OPTIMIZE="$RPM_OPT_FLAGS -DPERL_POLLUTE"
+%{__make} OPTIMIZE="$RPM_OPT_FLAGS -DPERL_POLLUTE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 install eg/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 strip --strip-unneeded \
