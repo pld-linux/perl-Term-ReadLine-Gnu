@@ -14,8 +14,6 @@ BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	readline-devel >= 4.2
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 Provides:	perl(Term::ReadLine::Gnu::XS)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
