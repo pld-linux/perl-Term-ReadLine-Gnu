@@ -25,7 +25,8 @@ Summary(zh_CN):	Term::ReadLine::Gnu Perl Ä£¿é
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.14
 Release:	2
-License:	distributable
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	c82301a465cb7e3400ef31c5888440c5
@@ -65,7 +66,8 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
+%{__make} \
+	OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 %{?with_tests:%{__make} test}
 
@@ -73,8 +75,8 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
+%{__make} \
+	install DESTDIR=$RPM_BUILD_ROOT
 rm -f eg/*.orig
 install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
