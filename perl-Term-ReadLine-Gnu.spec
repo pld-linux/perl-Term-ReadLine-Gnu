@@ -29,7 +29,7 @@ Modu³ Perla Term::ReadLine::Gnu.
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -DPERL_POLLUTE"
+%{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
