@@ -24,7 +24,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl Ä£¿é
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.13
-Release:	2
+Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -32,7 +32,7 @@ Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	readline-devel >= 4.2
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Term::ReadLine::Gnu::XS)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-Term-Readline-Gnu
@@ -62,7 +62,8 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 # tests require a working X connection
@@ -83,15 +84,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%dir %{perl_sitearch}/Term/ReadLine
-%{perl_sitearch}/Term/ReadLine/Gnu*
-%dir %{perl_sitearch}/auto/Term/ReadLine
-%dir %{perl_sitearch}/auto/Term/ReadLine/Gnu
-%attr(755,root,root) %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
-%{perl_sitearch}/auto/Term/ReadLine/Gnu/*.bs
+%dir %{perl_vendorarch}/Term/ReadLine
+%{perl_vendorarch}/Term/ReadLine/Gnu*
+%dir %{perl_vendorarch}/auto/Term/ReadLine
+%dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu
+%attr(755,root,root) %{perl_vendorarch}/auto/Term/ReadLine/Gnu/*.so
+%{perl_vendorarch}/auto/Term/ReadLine/Gnu/*.bs
 # empty autosplit.ix, but requred
-%dir %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
-%{perl_sitearch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
+%dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS
+%{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
