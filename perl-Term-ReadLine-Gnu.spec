@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _with_tests - perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Term
 %define		pnam	ReadLine-Gnu
@@ -11,16 +15,16 @@ Summary(it):	Modulo di Perl Term::ReadLine::Gnu
 Summary(ja):	Term::ReadLine::Gnu Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Term::ReadLine::Gnu ÆÞ ¸ðÁÙ
 Summary(no):	Perlmodul Term::ReadLine::Gnu
-Summary(pl):	Modu³ perla Term::ReadLine::Gnu
-Summary(pt_BR):	Módulo Perl Term::ReadLine::Gnu
+Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Summary(pt):	Módulo de Perl Term::ReadLine::Gnu
+Summary(pt_BR):	Módulo Perl Term::ReadLine::Gnu
 Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
 Summary(sv):	Term::ReadLine::Gnu Perlmodul
 Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl Ä£¿é
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.12
-Release:	5
+Version:	1.13
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -61,6 +65,9 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
+# tests require a working X connection
+%{?_with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -82,7 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_sitearch}/auto/Term/ReadLine/Gnu
 %attr(755,root,root) %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.bs
-%{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
+# empty autosplit.ix
+#%dir %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
+#%{perl_sitearch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
