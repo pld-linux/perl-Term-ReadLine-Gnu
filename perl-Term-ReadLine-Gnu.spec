@@ -85,4 +85,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
-%attr(755,root,root) %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
