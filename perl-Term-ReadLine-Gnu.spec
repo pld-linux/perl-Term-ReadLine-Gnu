@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# perform "make test" (require a working X connection)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Term
@@ -35,8 +35,8 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	readline-devel >= 4.2
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Term::ReadLine::Gnu::XS)
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-Term-Readline-Gnu
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Perl Term::ReadLine::Gnu module.
@@ -67,8 +67,7 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
-# tests require a working X connection
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
