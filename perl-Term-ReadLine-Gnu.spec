@@ -23,12 +23,12 @@ Summary(sv):	Term::ReadLine::Gnu Perlmodul
 Summary(uk):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl дё©И
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.13
-Release:	3
+Version:	1.14
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	67eeba8587e7e6146f0e271ffc065db6
+# Source0-md5:	c82301a465cb7e3400ef31c5888440c5
 Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl-devel >= 5.6.1
