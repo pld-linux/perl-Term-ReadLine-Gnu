@@ -27,7 +27,7 @@ Version:	1.13
 Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl >= 5.6.1
