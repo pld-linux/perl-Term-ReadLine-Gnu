@@ -16,7 +16,7 @@ BuildRequires:	readline-devel >= 4.1
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 Provides:	perl(Term::ReadLine::Gnu::XS)
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Perl Term::ReadLine::Gnu module.
