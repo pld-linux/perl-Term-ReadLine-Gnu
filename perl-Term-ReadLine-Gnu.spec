@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl дё©И
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.13
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -89,9 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_sitearch}/auto/Term/ReadLine/Gnu
 %attr(755,root,root) %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.bs
-# empty autosplit.ix
-#%dir %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
-#%{perl_sitearch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
+# empty autosplit.ix, but requred
+%dir %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
+%{perl_sitearch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
