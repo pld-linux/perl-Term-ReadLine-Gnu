@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Term
 %define	pnam	ReadLine-Gnu
-%include	/usr/lib/rpm/macros.perl
 Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.11
-Release:	3
-
+Release:	4
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -26,7 +25,7 @@ Perl Term::ReadLine::Gnu module.
 Modu³ Perla Term::ReadLine::Gnu.
 
 %prep
-%setup -q -n Term-ReadLine-Gnu-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p0
 
 %build
