@@ -62,7 +62,7 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 %patch0 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 # tests require a working X connection
