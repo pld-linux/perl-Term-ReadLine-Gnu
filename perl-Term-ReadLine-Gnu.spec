@@ -32,7 +32,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	c82301a465cb7e3400ef31c5888440c5
 Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
-BuildRequires:	perl-devel >= 5.6.1
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	readline-devel >= 4.2
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Term::ReadLine::Gnu::XS)
