@@ -1,40 +1,48 @@
---- eg.paths/fileman	Sat Feb 28 11:01:34 1998
-+++ eg/fileman	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.12.orig/eg/fileman	Sat Feb 28 11:01:34 1998
++++ Term-ReadLine-Gnu-1.12eg/fileman	Sat Feb 19 22:55:58 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  #
  # $Id$
  #
---- eg.paths/perlsh	Thu Dec 30 06:05:30 1999
-+++ eg/perlsh	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.12.orig/eg/perlsh	Thu Dec 30 06:05:30 1999
++++ Term-ReadLine-Gnu-1.12/eg/perlsh	Sat Feb 19 22:55:58 2000
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
  #
  #	$Id$	
  #
---- eg.paths/pftp	Fri Mar 19 18:46:02 1999
-+++ eg/pftp	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.12.orig/eg/pftp	Fri Mar 19 18:46:02 1999
++++ Term-ReadLine-Gnu-1.12/eg/pftp	Sat Feb 19 22:55:58 2000
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
  #
  #	$Id$
  #
---- eg.paths/ptksh+	Sun Mar 14 17:43:20 1999
-+++ eg/ptksh+	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.12.orig/eg/ptksh+	Sun Mar 14 17:43:20 1999
++++ Term-ReadLine-Gnu-1.12/eg/ptksh+	Sat Feb 19 22:55:58 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
 +#!/usr/bin/perl -w
  #
  # $Id$
  #
---- Gnu/XS.pm.orig	Tue May  4 19:48:24 1999
-+++ Gnu/XS.pm	Sat Feb 19 23:03:38 2000
+--- Term-ReadLine-Gnu-1.12.orig/Gnu/XS.pm	Tue May  4 19:48:24 1999
++++ Term-ReadLine-Gnu-1.12/Gnu/XS.pm	Sat Feb 19 23:03:38 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  #
  #	XS.pm : perl function definition for Term::ReadLine::Gnu
  #
+--- Term-ReadLine-Gnu-1.12.orig/Gnu/euc_jp.pm	Sun Jul 14 21:05:06 2002
++++ Term-ReadLine-Gnu-1.12/Gnu/euc_jp.pm	Sun Jul 14 21:05:11 2002
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ #
+ #	euc_jp.pm : EUC Japanese Character Support Functions
+ #		This modules is experimental.  API may be changed.
