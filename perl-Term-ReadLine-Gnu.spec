@@ -23,8 +23,8 @@ Summary(sv):	Term::ReadLine::Gnu Perlmodul
 Summary(uk):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl дё©И
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.13
-Release:	2
+Version:	1.14
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
