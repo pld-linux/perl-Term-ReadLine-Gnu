@@ -2,13 +2,14 @@
 Summary:	Perl Term::ReadLine::Gnu module
 Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.08
-Release:	4
-Copyright:	distributable
+Version:	1.09
+Release:	1
+License:	Distributable
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/Term-ReadLine-Gnu-%{version}.tar.gz
-Patch0:		perl-Term-ReadLine-Gnu-paths.patch
+Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.6.0-1
 BuildRequires:	ncurses-devel >= 5.0
@@ -30,7 +31,7 @@ Modu³ Perla Term::ReadLine::Gnu.
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="$RPM_OPT_FLAGS -DPERL_POLLUTE"
+%{__make} OPTIMIZE="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -DPERL_POLLUTE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -39,17 +40,13 @@ install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 install eg/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
-strip --strip-unneeded \
-	$RPM_BUILD_ROOT%{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
-
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Term/ReadLine/Gnu
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-	README
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
