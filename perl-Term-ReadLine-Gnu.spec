@@ -32,7 +32,7 @@ Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	readline-devel >= 4.2
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Provides:	perl(Term::ReadLine::Gnu::XS)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	perl-Term-Readline-Gnu
