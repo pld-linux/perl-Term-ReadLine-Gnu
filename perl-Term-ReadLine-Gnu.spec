@@ -28,6 +28,7 @@ Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	67eeba8587e7e6146f0e271ffc065db6
 Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl-devel >= 5.6.1
