@@ -64,7 +64,7 @@ oprogramowaæ w³asne funkcje edycji, dope³niania itp.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 # tests require a working X connection
