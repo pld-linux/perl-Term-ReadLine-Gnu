@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Term
-%define	pnam	ReadLine-Gnu
-Summary:	Perl Term::ReadLine::Gnu module
-Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
+%define		pdir	Term
+%define		pnam	ReadLine-Gnu
+Summary:	Term::ReadLine::Gnu Perl module
+Summary(cs):	Modul Term::ReadLine::Gnu pro Perl
+Summary(da):	Perlmodul Term::ReadLine::Gnu
+Summary(de):	Term::ReadLine::Gnu Perl Modul
+Summary(es):	Módulo de Perl Term::ReadLine::Gnu
+Summary(fr):	Module Perl Term::ReadLine::Gnu
+Summary(it):	Modulo di Perl Term::ReadLine::Gnu
+Summary(ja):	Term::ReadLine::Gnu Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Term::ReadLine::Gnu ÆŞ ¸ğÁÙ
+Summary(no):	Perlmodul Term::ReadLine::Gnu
+Summary(pl):	Modu³ perla Term::ReadLine::Gnu
+Summary(pt_BR):	Módulo Perl Term::ReadLine::Gnu
+Summary(pt):	Módulo de Perl Term::ReadLine::Gnu
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
+Summary(sv):	Term::ReadLine::Gnu Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
+Summary(zh_CN):	Term::ReadLine::Gnu Perl Ä£¿é
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.12
-Release:	4
+Release:	5
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -69,4 +84,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/*.bs
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/XS
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}-%{version}
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}
