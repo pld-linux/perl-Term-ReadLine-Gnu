@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (require a working X connection)
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Term
-%define		pnam	ReadLine-Gnu
+%define	pdir	Term
+%define	pnam	ReadLine-Gnu
 Summary:	Term::ReadLine::Gnu Perl module
 Summary(cs):	Modul Term::ReadLine::Gnu pro Perl
 Summary(da):	Perlmodul Term::ReadLine::Gnu
