@@ -7,8 +7,8 @@ Release:	2
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/Term-ReadLine-Gnu-%{version}.tar.gz
-Patch:		perl-Term-ReadLine-Gnu-paths.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Term/Term-ReadLine-Gnu-%{version}.tar.gz
+Patch0:		perl-Term-ReadLine-Gnu-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	ncurses-devel >= 5.0
@@ -34,10 +34,10 @@ make OPTIMIZE="$RPM_OPT_FLAGS -DPERL_POLLUTE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 make install DESTDIR=$RPM_BUILD_ROOT
-install eg/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install eg/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 strip --strip-unneeded \
 	$RPM_BUILD_ROOT%{perl_sitearch}/auto/Term/ReadLine/Gnu/*.so
@@ -67,4 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/auto/Term/ReadLine/Gnu/.packlist
 
 %{_mandir}/man3/*
-/usr/src/examples/%{name}
+%{_prefix}/src/examples/%{name}
