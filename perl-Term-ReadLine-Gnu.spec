@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN):	Term::ReadLine::Gnu Perl дё©И
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.15
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
