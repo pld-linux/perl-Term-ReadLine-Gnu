@@ -6,22 +6,22 @@
 %define		pdir	Term
 %define		pnam	ReadLine-Gnu
 Summary:	Term::ReadLine::Gnu Perl module
-Summary(cs):	Modul Term::ReadLine::Gnu pro Perl
-Summary(da):	Perlmodul Term::ReadLine::Gnu
-Summary(de):	Term::ReadLine::Gnu Perl Modul
-Summary(es):	Módulo de Perl Term::ReadLine::Gnu
-Summary(fr):	Module Perl Term::ReadLine::Gnu
-Summary(it):	Modulo di Perl Term::ReadLine::Gnu
-Summary(ja):	Term::ReadLine::Gnu Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Term::ReadLine::Gnu ÆŞ ¸ğÁÙ
-Summary(nb):	Perlmodul Term::ReadLine::Gnu
-Summary(pl):	Modu³ Perla Term::ReadLine::Gnu
-Summary(pt):	Módulo de Perl Term::ReadLine::Gnu
-Summary(pt_BR):	Módulo Perl Term::ReadLine::Gnu
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
-Summary(sv):	Term::ReadLine::Gnu Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Term::ReadLine::Gnu
-Summary(zh_CN):	Term::ReadLine::Gnu Perl Ä£¿é
+Summary(cs.UTF-8):   Modul Term::ReadLine::Gnu pro Perl
+Summary(da.UTF-8):   Perlmodul Term::ReadLine::Gnu
+Summary(de.UTF-8):   Term::ReadLine::Gnu Perl Modul
+Summary(es.UTF-8):   MÃ³dulo de Perl Term::ReadLine::Gnu
+Summary(fr.UTF-8):   Module Perl Term::ReadLine::Gnu
+Summary(it.UTF-8):   Modulo di Perl Term::ReadLine::Gnu
+Summary(ja.UTF-8):   Term::ReadLine::Gnu Perl ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+Summary(ko.UTF-8):   Term::ReadLine::Gnu í„ ëª¨ì¤„
+Summary(nb.UTF-8):   Perlmodul Term::ReadLine::Gnu
+Summary(pl.UTF-8):   ModuÅ‚ Perla Term::ReadLine::Gnu
+Summary(pt.UTF-8):   MÃ³dulo de Perl Term::ReadLine::Gnu
+Summary(pt_BR.UTF-8):   MÃ³dulo Perl Term::ReadLine::Gnu
+Summary(ru.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl Term::ReadLine::Gnu
+Summary(sv.UTF-8):   Term::ReadLine::Gnu Perlmodul
+Summary(uk.UTF-8):   ĞœĞ¾Ğ´ÑƒĞ»ÑŒ Ğ´Ğ»Ñ Perl Term::ReadLine::Gnu
+Summary(zh_CN.UTF-8):   Term::ReadLine::Gnu Perl æ¨¡å—
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.16
 Release:	1
@@ -51,13 +51,13 @@ Readline/History Library. So you can program your custom editing
 function, your custom completion function, and so on with Perl. This
 may be useful for prototyping before programming with C.
 
-%description -l pl
-Modu³ Perla Term::ReadLine::Gnu. Jest on implementacj± interfejsu do
-biblioteki GNU Readline. Udostêpnia liniê wprowadzania tekstu z
-mo¿liwo¶ci± edycji, zarz±dzania histori±, automatycznym dope³nianiem
-itp. U¿ywa biblioteki GNU Readline, ma interfejs do prawie wszystkich
-zmiennych i funkcji bibliotek Readline i History - mo¿na wiêc
-oprogramowaæ w³asne funkcje edycji, dope³niania itp.
+%description -l pl.UTF-8
+ModuÅ‚ Perla Term::ReadLine::Gnu. Jest on implementacjÄ… interfejsu do
+biblioteki GNU Readline. UdostÄ™pnia liniÄ™ wprowadzania tekstu z
+moÅ¼liwoÅ›ciÄ… edycji, zarzÄ…dzania historiÄ…, automatycznym dopeÅ‚nianiem
+itp. UÅ¼ywa biblioteki GNU Readline, ma interfejs do prawie wszystkich
+zmiennych i funkcji bibliotek Readline i History - moÅ¼na wiÄ™c
+oprogramowaÄ‡ wÅ‚asne funkcje edycji, dopeÅ‚niania itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
