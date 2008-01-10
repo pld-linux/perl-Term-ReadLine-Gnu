@@ -67,6 +67,7 @@ oprogramować własne funkcje edycji, dopełniania itp.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags} -DPERL_POLLUTE"
 
 %{?with_tests:%{__make} test}
@@ -76,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} \
+	CC="%{__cc}" \
 	install DESTDIR=$RPM_BUILD_ROOT
 rm -f eg/*.orig
 install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
