@@ -24,7 +24,7 @@ Summary(uk.UTF-8):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN.UTF-8):	Term::ReadLine::Gnu Perl 模块
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.17a
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -61,7 +61,7 @@ oprogramować własne funkcje edycji, dopełniania itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-1.17
-#%patch0 -p1
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
