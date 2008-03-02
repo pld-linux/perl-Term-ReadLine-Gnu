@@ -23,13 +23,13 @@ Summary(sv.UTF-8):	Term::ReadLine::Gnu Perlmodul
 Summary(uk.UTF-8):	Модуль для Perl Term::ReadLine::Gnu
 Summary(zh_CN.UTF-8):	Term::ReadLine::Gnu Perl 模块
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.16
-Release:	2
+Version:	1.17a
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2e07264583d5f6ca1d84cde7177888c9
+# Source0-md5:	acdd3ded64423390824f31149ebfdf5c
 Patch0:		%{name}-paths.patch
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -60,8 +60,8 @@ zmiennych i funkcji bibliotek Readline i History - można więc
 oprogramować własne funkcje edycji, dopełniania itp.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
+%setup -q -n %{pdir}-%{pnam}-1.17
+#%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
