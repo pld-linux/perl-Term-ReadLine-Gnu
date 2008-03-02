@@ -1,48 +1,39 @@
---- Term-ReadLine-Gnu-1.12.orig/eg/fileman	Sat Feb 28 11:01:34 1998
-+++ Term-ReadLine-Gnu-1.12eg/fileman	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.17/eg/fileman~	1998-02-28 10:01:34.000000000 +0000
++++ Term-ReadLine-Gnu-1.17/eg/fileman	2008-03-02 16:27:50.629026340 +0000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl
 +#!/usr/bin/perl
  #
  # $Id$
  #
---- Term-ReadLine-Gnu-1.12.orig/eg/perlsh	Thu Dec 30 06:05:30 1999
-+++ Term-ReadLine-Gnu-1.12/eg/perlsh	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.17/eg/perlsh~	2005-01-20 05:24:21.000000000 +0000
++++ Term-ReadLine-Gnu-1.17/eg/perlsh	2008-03-02 16:27:59.628407833 +0000
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
  #
  #	$Id$	
  #
---- Term-ReadLine-Gnu-1.12.orig/eg/pftp	Fri Mar 19 18:46:02 1999
-+++ Term-ReadLine-Gnu-1.12/eg/pftp	Sat Feb 19 22:55:58 2000
+--- Term-ReadLine-Gnu-1.17/eg/pftp~	1999-03-19 17:46:02.000000000 +0000
++++ Term-ReadLine-Gnu-1.17/eg/pftp	2008-03-02 16:28:02.128236026 +0000
 @@ -1,4 +1,4 @@
 -#! /usr/local/bin/perl
 +#!/usr/bin/perl
  #
  #	$Id$
  #
---- Term-ReadLine-Gnu-1.12.orig/eg/ptksh+	Sun Mar 14 17:43:20 1999
-+++ Term-ReadLine-Gnu-1.12/eg/ptksh+	Sat Feb 19 22:55:58 2000
-@@ -1,4 +1,4 @@
--#!/usr/local/bin/perl -w
-+#!/usr/bin/perl -w
- #
- # $Id$
- #
---- Term-ReadLine-Gnu-1.12.orig/Gnu/XS.pm	Tue May  4 19:48:24 1999
-+++ Term-ReadLine-Gnu-1.12/Gnu/XS.pm	Sat Feb 19 23:03:38 2000
-@@ -1,4 +1,4 @@
+--- Term-ReadLine-Gnu-1.17/Gnu/XS.pm~	2008-02-07 15:44:08.000000000 +0000
++++ Term-ReadLine-Gnu-1.17/Gnu/XS.pm	2008-03-02 16:29:48.620917026 +0000
+@@ -1,4 +1,3 @@
 -#!/usr/local/bin/perl
-+#!/usr/bin/perl
  #
  #	XS.pm : perl function definition for Term::ReadLine::Gnu
  #
---- Term-ReadLine-Gnu-1.12.orig/Gnu/euc_jp.pm	Sun Jul 14 21:05:06 2002
-+++ Term-ReadLine-Gnu-1.12/Gnu/euc_jp.pm	Sun Jul 14 21:05:11 2002
+--- Term-ReadLine-Gnu-1.17/eg/ptksh+.orig	2008-03-02 16:50:56.533776262 +0000
++++ Term-ReadLine-Gnu-1.17/eg/ptksh+	2008-03-02 16:50:16.036559543 +0000
 @@ -1,4 +1,4 @@
--#!/usr/local/bin/perl
+-#!/usr/local/bin/perl -w
 +#!/usr/bin/perl
  #
- #	euc_jp.pm : EUC Japanese Character Support Functions
- #		This modules is experimental.  API may be changed.
+ # $Id$
+ #
