@@ -8,13 +8,13 @@
 Summary:	Term::ReadLine::Gnu - Perl interface for the GNU Readline/History library
 Summary(pl.UTF-8):	Term::ReadLine::Gnu - perlowy interfejs do biblioteki GNU Readline/History
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.17a
-Release:	3
+Version:	1.19
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Term/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	acdd3ded64423390824f31149ebfdf5c
+# Source0-md5:	e591287af62e000256893c84d01abebe
 Patch0:		%{name}-paths.patch
 URL:		http://search.cpan.org/dist/Term-ReadLine-Gnu/
 BuildRequires:	ncurses-devel >= 5.2
@@ -45,7 +45,7 @@ zmiennych i funkcji bibliotek Readline i History - można więc
 oprogramować własne funkcje edycji, dopełniania itp.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-1.17
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
 
 %build
