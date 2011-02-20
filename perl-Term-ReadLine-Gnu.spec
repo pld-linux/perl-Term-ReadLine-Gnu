@@ -8,13 +8,13 @@
 Summary:	Term::ReadLine::Gnu - Perl interface for the GNU Readline/History library
 Summary(pl.UTF-8):	Term::ReadLine::Gnu - perlowy interfejs do biblioteki GNU Readline/History
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.19
-Release:	3
+Version:	1.20
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Term/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e591287af62e000256893c84d01abebe
+Source0:	http://www.cpan.org/modules/by-module/Term/HAYASHI/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	fa33510193b89a2ada74fcef00816322
 Patch0:		%{name}-paths.patch
 URL:		http://search.cpan.org/dist/Term-ReadLine-Gnu/
 BuildRequires:	ncurses-devel >= 5.2
@@ -61,9 +61,10 @@ oprogramować własne funkcje edycji, dopełniania itp.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} \
+%{__make} install \
 	CC="%{__cc}" \
-	install DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
+
 rm -f eg/*.orig
 install eg/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
@@ -77,11 +78,11 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Term/ReadLine/Gnu*
 %dir %{perl_vendorarch}/auto/Term/ReadLine
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu
-%attr(755,root,root) %{perl_vendorarch}/auto/Term/ReadLine/Gnu/*.so
-%{perl_vendorarch}/auto/Term/ReadLine/Gnu/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Term/ReadLine/Gnu/Gnu.so
+%{perl_vendorarch}/auto/Term/ReadLine/Gnu/Gnu.bs
 # empty autosplit.ix, but requred
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS
 %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
-%{_mandir}/man3/*
+%{_mandir}/man3/Term::ReadLine::Gnu.3pm*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
