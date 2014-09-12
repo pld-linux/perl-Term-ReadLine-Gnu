@@ -79,7 +79,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Term/ReadLine
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu
 %attr(755,root,root) %{perl_vendorarch}/auto/Term/ReadLine/Gnu/Gnu.so
-%{perl_vendorarch}/auto/Term/ReadLine/Gnu/Gnu.bs
 # empty autosplit.ix, but requred
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS
 %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
