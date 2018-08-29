@@ -8,14 +8,13 @@
 Summary:	Term::ReadLine::Gnu - Perl interface for the GNU Readline/History library
 Summary(pl.UTF-8):	Term::ReadLine::Gnu - perlowy interfejs do biblioteki GNU Readline/History
 Name:		perl-Term-ReadLine-Gnu
-Version:	1.20
-Release:	10
+Version:	1.35
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Term/HAYASHI/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fa33510193b89a2ada74fcef00816322
-Patch0:		%{name}-paths.patch
+# Source0-md5:	514619d68bda1618da61b19d04b5cefe
 URL:		http://search.cpan.org/dist/Term-ReadLine-Gnu/
 BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -46,7 +45,6 @@ oprogramować własne funkcje edycji, dopełniania itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -79,8 +77,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Term/ReadLine
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu
 %attr(755,root,root) %{perl_vendorarch}/auto/Term/ReadLine/Gnu/Gnu.so
-# empty autosplit.ix, but requred
+# empty autosplit.ix and *.al files, but requred
 %dir %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS
+%{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS/*.al
 %{perl_vendorarch}/auto/Term/ReadLine/Gnu/XS/autosplit.ix
 %{_mandir}/man3/Term::ReadLine::Gnu.3pm*
 %dir %{_examplesdir}/%{name}-%{version}
