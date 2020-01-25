@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (require a working X connection)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Term
 %define		pnam	ReadLine-Gnu
 Summary:	Term::ReadLine::Gnu - Perl interface for the GNU Readline/History library
