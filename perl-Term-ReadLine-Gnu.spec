@@ -8,7 +8,7 @@ Summary:	Term::ReadLine::Gnu - Perl interface for the GNU Readline/History libra
 Summary(pl.UTF-8):	Term::ReadLine::Gnu - perlowy interfejs do biblioteki GNU Readline/History
 Name:		perl-Term-ReadLine-Gnu
 Version:	1.36
-Release:	6
+Release:	7
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
